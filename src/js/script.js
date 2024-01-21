@@ -85,7 +85,7 @@
       thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
       thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
       thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper);
-      console.log(thisProduct.imageWrapper);
+      console.log( thisProduct.imageWrapper);
     }
 
     initAccordion() {
@@ -138,26 +138,26 @@
 
         for (let optionId in param.options) {
           const option = param.options[optionId];
-          console.log('optionId', optionId, option);
+          console.log('optionId',optionId, option);
           const optionSelected = formData[paramId] && formData[paramId].includes(optionId);
           const optionImage = thisProduct.imageWrapper.querySelector(`.${paramId}-${optionId}`);
 
 
-          if (optionSelected) {
-            if (!option.default) {
+          if (optionSelected){
+            if(!option.default){
               price += Number(option.price);
 
             }
           } else {
-            if (option.default) {
+            if(option.default){
               price -= Number(option.price);
             }
           }
 
 
-          if (optionImage) {
-            if (optionSelected) {
-              optionImage.classList.add(classNames.menuProduct.imageVisible)
+          if(optionImage){
+            if (optionSelected){
+              optionImage.classList.add(classNames.menuProduct.imageVisible);
             } else {
               optionImage.classList.remove(classNames.menuProduct.imageVisible);
             }
