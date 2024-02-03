@@ -39,11 +39,11 @@ class AmountWidget {
     });
     thisWidget.linkDecrease.addEventListener('click', (event) => {
       event.preventDefault();
-      thisWidget.setValue(thisWidget.input.value - 1);
+      thisWidget.setValue(thisWidget.value - 1);
     });
     thisWidget.linkIncrease.addEventListener('click', (event) => {
       event.preventDefault();
-      thisWidget.setValue(Number(thisWidget.input.value) + 1);
+      thisWidget.setValue(Number(thisWidget.value) + 1);
     });
 
   }
