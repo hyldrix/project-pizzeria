@@ -116,8 +116,8 @@ class Product {
       }
     }
     thisProduct.priceSingle = price;
-    price *= thisProduct.amountWidget.input.value;
-    thisProduct.dom.priceElem.innerHTML = price;
+    thisProduct.price = thisProduct.priceSingle * thisProduct.amountWidget.value;
+    thisProduct.dom.priceElem.innerHTML =  thisProduct.price;
   }
 
   initAmountWidget() {
