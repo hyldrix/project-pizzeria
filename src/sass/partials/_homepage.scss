@@ -147,19 +147,23 @@
       z-index: 1;
       height: 190px;
       background-size: cover;
-      border-radius: 5px;
       display: flex;
+      position: relative;
       justify-content: center;
       align-items: center;
       transition: all 1s;
 
       &:hover {
-        transition: all 1s;
-        -webkit-filter: brightness(75%);
-        -moz-filter: brightness(75%);
-        -o-filter: brightness(75%);
-        -ms-filter: brightness(75%);
-        filter: brightness(75%);
+
+        .img {
+          transition: all 1s;
+          -webkit-filter: brightness(75%);
+          -moz-filter: brightness(75%);
+          -o-filter: brightness(75%);
+          -ms-filter: brightness(75%);
+          filter: brightness(75%);
+        }
+
 
         .social-media-icons {
           display: flex;
@@ -177,28 +181,37 @@
         }
       }
 
-      &.item-1 {
-        background-image: url("/images/assets/pizza-4.jpg");
-
+      & .img {
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        z-index: 1;
+        border-radius: 5px;
       }
 
-      &.item-2 {
+      & .image-1 {
+        background-image: url("/images/assets/pizza-4.jpg");
+      }
+
+      & .image-2 {
         background-image: url("/images/assets/pizza-5.jpg");
       }
 
-      &.item-3 {
+      & .image-3 {
         background-image: url("/images/assets/pizza-6.jpg");
       }
 
-      &.item-4 {
+      & .image-4 {
         background-image: url("/images/assets/pizza-7.jpg");
       }
 
-      &.item-5 {
+      & .image-5 {
         background-image: url("/images/assets/pizza-8.jpg");
       }
 
-      &.item-6 {
+      & .image-6 {
         background-image: url("/images/assets/pizza-9.jpg");
       }
 
